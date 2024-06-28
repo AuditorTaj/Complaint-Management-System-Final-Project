@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["TAJ AHMED <141453003+AuditorTaj@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "^0.30.1"}
+sqlalchemy = "^2.0.31"
+asyncpg = "^0.29.0"
+alembic = "^1.13.1"
+pydantic = "^2.7.4"
+kafka-python = "^2.0.2"
+psycopg2-binary = "^2.9.9"
+streamlit = "^1.36.0"
+cryptography = "^42.0.8"
+confluent-kafka = "^2.4.0"
+pandas = "^2.2.2"
+databases = "^0.9.0"
+passlib = "^1.7.4"
+pyjwt = "^2.8.0"
+aiosqlite = "^0.20.0"
+typing-extensions = "^4.12.2"
+kong = "^0.2.1"
+postgres = "^4.0"
+neon = "^0.1.2"
+python-jose = "^3.3.0"
+requests = "^2.32.3"
+aiohttp = "^3.9.5"
+python-dotenv = "^1.0.1"
+sqlalchemy-orm = "^1.2.10"
+sqlmodel = "^0.0.19"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,23 @@
+# Dockerfile.streamlit
+
+FROM python:3.12
+
+# Install Poetry
+RUN pip install poetry
+
+# Set work directory
+WORKDIR /app
+
+# Copy only the requirements to cache them in docker layer
+COPY pyproject.toml poetry.lock /app/
+
+# Project initialization
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-interaction --no-ansi
+
+# Copy the content of the local src directory to the work directory
+COPY . /app
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "streamlit_app.py"]
